@@ -7,7 +7,7 @@ ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✓%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_NEED_TO_PUSH="%{$fg_bold[yellow]%}⤒%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_NEED_TO_ADD="%{$fg_bold[yellow]%}±%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_NEED_TO_ADD="%{$fg_bold[red]%}±%{$reset_color%}"
 
 
 function git_status() {
