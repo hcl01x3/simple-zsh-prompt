@@ -14,7 +14,7 @@ function git_status() {
   local branch=$(git branch --show-current 2> /dev/null)
   if [[ $branch != "" ]]; then
     local prompt="${ZSH_THEME_GIT_PROMPT_PREFIX}$branch"
-    local needToAdd=$(git ls-files --modified --deleted --others $(git rev-parse --show-toplevel) 2> /dev/null | wc -l)
+    local needToAdd=$(git ls-files --modified --deleted --others --exclude-standard $(git rev-parse --show-toplevel) 2> /dev/null | wc -l)
 
     if [[ $needToAdd -ne 0 ]]; then
       prompt="${prompt} ${ZSH_THEME_GIT_PROMPT_NEED_TO_ADD} "
